@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @geopost.content %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @geopost.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @geopost.latitude %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @geopost.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_geopost_path(@geopost) %> |
+<%= link_to 'Back', geoposts_path %>

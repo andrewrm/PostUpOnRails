@@ -1,0 +1,29 @@
+<h1>Listing geoposts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Longitude</th>
+    <th>Latitude</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @geoposts.each do |geopost| %>
+  <tr>
+    <td><%= geopost.content %></td>
+    <td><%= geopost.longitude %></td>
+    <td><%= geopost.latitude %></td>
+    <td><%= geopost.user_id %></td>
+    <td><%= link_to 'Show', geopost %></td>
+    <td><%= link_to 'Edit', edit_geopost_path(geopost) %></td>
+    <td><%= link_to 'Destroy', geopost, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Geopost', new_geopost_path %>
